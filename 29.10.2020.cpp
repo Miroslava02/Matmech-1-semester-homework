@@ -1,3 +1,4 @@
+//поиск первой наибольшей возрастающей подпоследовательности
 #include "stdafx.h"
 #include <vector>
 #include <iostream>
