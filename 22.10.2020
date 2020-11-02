@@ -67,7 +67,7 @@ int karatsuba(vector<int> X, vector <int> Y) {
         int A = karatsuba(X, Y);
         int B = karatsuba(X_1, Y_1);
         int C = karatsuba(sum(X, X_1), sum(Y, Y_1));
-        return multiply(A, pow(10, Max)) + multiply((A - B - C), pow(10, Max / 2)) + 10;
+        return multiply(A, pow(10, Max)) + multiply((A - B - C), pow(10, Max / 2)) + B;
     }
 }
 
