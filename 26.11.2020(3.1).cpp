@@ -24,7 +24,7 @@ int Min(int** &A, int m, int n) {
             }
         }
     }
-    return D[m][n];
+    return D[m-1][n-1];
 }
 
 int main() {
