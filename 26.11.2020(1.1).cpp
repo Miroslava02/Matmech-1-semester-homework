@@ -5,9 +5,7 @@ using namespace std;
 
 int S(int N) {
     double a = sqrt(N);
-    cout << a;
     int b = int(a);
-    cout << b;
     int** D = new int* [b + 1];
     for (int i = 0; i <= sqrt(N); i++) {
         D[i] = new int[N + 1];
@@ -26,7 +24,6 @@ int S(int N) {
                     D[i][j] = D[i - 1][j];
                 }
             }
-            cout<<D[i][j]<<" ";
         }
         if (i != 0) {
             delete[] D[i - 1];
