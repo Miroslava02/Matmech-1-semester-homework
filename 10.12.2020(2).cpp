@@ -15,11 +15,9 @@ int minimum(string& A, string& B, int a, int b, int c) {
     int** D = new int* [A.length() + 1];
     for (int i = 0; i <= A.length(); i++) {
         D[i] = new int[B.length() + 1];
-    }
-    for (int i = 0; i <= A.length(); i++) {
         for (int j = 0; j <= B.length(); j++) {
             if ((i != 0) && (j != 0)) {
-                D[i][j] = min(min(D[i - 1][j] + a, D[i][j - 1] + b), D[i - 1][j - 1] + c*compare(A, B, i, j));
+                D[i][j] = min(min(D[i - 1][j] + a, D[i][j - 1] + b), D[i - 1][j - 1] + c * compare(A, B, i, j));
             }
             else if (j == 0) {
                 D[i][j] = i;
@@ -28,8 +26,12 @@ int minimum(string& A, string& B, int a, int b, int c) {
                 D[i][j] = j;
             }
         }
+        if (i != 0) {
+            delete[] D[i - 1];
+        }
     }
     return D[A.size()][B.size()];
+    delete D[A.size()];
 }
 
 int main() {
