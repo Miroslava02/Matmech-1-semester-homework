@@ -23,12 +23,10 @@ int Min(int** &A, int m, int n) {
         }
         if (i != 0) {
             delete[] D[i - 1];
-            delete D[i-1];
         }
     }
     int s = D[m - 1][n - 1];
     delete[] D[m - 1];
-    delete D[m - 1];
     delete[] D;
     delete D;
     return s;
