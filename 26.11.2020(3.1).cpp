@@ -25,8 +25,9 @@ int Min(int** &A, int m, int n) {
             delete[] D[i - 1];
         }
     }
-    return D[m - 1][n - 1];
+    int s = D[m - 1][n - 1];
     delete[] D[m - 1];
+    return s;
 }
 
 int main() {
