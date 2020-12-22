@@ -23,8 +23,9 @@ int sum(int n, int k, int*& S, int*& W) {
 			delete[] D[i - 1];
 		}
 	}
-	return D[k][n];
+	int s = D[k][n];
 	delete[] D[k];
+	return s;
 }
 
 int main() {
