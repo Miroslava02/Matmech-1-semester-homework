@@ -29,8 +29,9 @@ int S(int N) {
             delete[] D[i - 1];
         }
     }
-    return D[b][N];
+    int s = D[b][N];
     delete[] D[b];
+    return s;
  }
 
 int main(){
