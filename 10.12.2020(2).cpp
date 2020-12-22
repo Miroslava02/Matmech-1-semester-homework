@@ -30,8 +30,9 @@ int minimum(string& A, string& B, int a, int b, int c) {
             delete[] D[i - 1];
         }
     }
-    return D[A.size()][B.size()];
-    delete D[A.size()];
+    int s = D[A.size()][B.size()];
+    delete[] D[A.size()];
+    return s;
 }
 
 int main() {
