@@ -31,6 +31,8 @@ int S(int N) {
     }
     int s = D[b][N];
     delete[] D[b];
+    delete[] D;
+    delete D;
     return s;
  }
 
